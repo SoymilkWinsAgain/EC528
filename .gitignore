@@ -1,0 +1,5 @@
+/hw2/data/*
+/hw2/*.html
+.venv/
+__pycache__/
+*.pyc

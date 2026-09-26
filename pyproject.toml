@@ -1,0 +1,9 @@
+[project]
+name = "ec528"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-cloud-storage>=3.15.0",
+]
