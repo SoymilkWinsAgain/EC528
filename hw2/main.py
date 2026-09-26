@@ -95,15 +95,6 @@ def closeness_centrality(outgoing, start, n=N):
 
 if __name__ == "__main__":
     start_time = perf_counter()
-    outgoing, incoming = load_graph()
-    
-    # compute degree statistics
-    out_degrees = np.array([len(x) for x in outgoing])
-    in_degrees = np.array([len(x) for x in incoming])
-    out_stats = compute_statistics(out_degrees)
-    in_stats = compute_statistics(in_degrees)
-    print("Out degree statistics:", out_stats)
-    print("In degree statistics:", in_stats)
     
     # tests
     test_outgoing = [[1, 2], [0], [0, 1]]
@@ -114,6 +105,16 @@ if __name__ == "__main__":
     test_cc = [closeness_centrality(test_outgoing, i, n=len(test_outgoing)) for i in range(len(test_outgoing))]
     print("Test Closeness Centrality:", test_cc)
     assert np.allclose(test_cc, [1.0, 2/3, 1.0])
+    
+    outgoing, incoming = load_graph()
+    
+    # compute degree statistics
+    out_degrees = np.array([len(x) for x in outgoing])
+    in_degrees = np.array([len(x) for x in incoming])
+    out_stats = compute_statistics(out_degrees)
+    in_stats = compute_statistics(in_degrees)
+    print("Out degree statistics:", out_stats)
+    print("In degree statistics:", in_stats)
     
     # compute PageRank and closeness centrality for the loaded graph
     pr = page_rank(outgoing, incoming, n=len(outgoing))
