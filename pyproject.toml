@@ -6,4 +6,5 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "google-cloud-storage>=3.15.0",
+    "numpy>=2.5.3",
 ]
