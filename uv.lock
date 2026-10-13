@@ -342,6 +342,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "functions-framework" },
+    { name = "google-cloud-logging" },
     { name = "google-cloud-pubsub" },
     { name = "google-cloud-storage" },
     { name = "numpy" },
@@ -350,6 +351,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "functions-framework", specifier = ">=3.10.2" },
+    { name = "google-cloud-logging", specifier = ">=3.17.0" },
     { name = "google-cloud-pubsub", specifier = ">=2.42.0" },
     { name = "google-cloud-storage", specifier = ">=3.15.0" },
     { name = "numpy", specifier = ">=2.5.3" },
@@ -429,6 +431,35 @@ wheels = [
 ]
 
 [[package]]
+name = "google-cloud-appengine-logging"
+version = "1.11.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "google-api-core", extra = ["grpc"] },
+    { name = "google-auth" },
+    { name = "grpcio" },
+    { name = "proto-plus" },
+    { name = "protobuf" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ac/34/aec7eca310c84a106a22dfaad076766c2e2ebe0389bdb88270a22c807f9d/google_cloud_appengine_logging-1.11.0.tar.gz", hash = "sha256:ce053792df98fde4790c5f070176088c9ebf0e55a37c754c8f8e11b28ddb4d73", size = 21678, upload-time = "2026-10-01T18:14:43.6Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2f/a8/da5d9865b0e1ce53194eb1052484303f86e94cd87f3b6d49511690f70ea6/google_cloud_appengine_logging-1.11.0-py3-none-any.whl", hash = "sha256:4d70953a0f35d0295256d977e7e3962242674d64c72fcb3e48b10a1cbf4f9b54", size = 20251, upload-time = "2026-10-01T18:08:00.913Z" },
+]
+
+[[package]]
+name = "google-cloud-audit-log"
+version = "0.6.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "googleapis-common-protos" },
+    { name = "protobuf" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/69/91/e2a4ed95e790564b807a61fd54d90aa6bf2d3a9474bc5197651acf0cad13/google_cloud_audit_log-0.6.2.tar.gz", hash = "sha256:ea5dc892b1858d345aef0c5563a728534fa875bd0388765391574d3c57fd8f0e", size = 41010, upload-time = "2026-08-25T19:18:29.397Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7d/f3/f24fba2cb01ad41615d55335306642e3ddf3a5c3cdda6b44754d37bd650e/google_cloud_audit_log-0.6.2-py3-none-any.whl", hash = "sha256:1f19bdf2586cfdb72054eec769ede153a037988b73a7d3b6d266f672ab426c00", size = 40382, upload-time = "2026-08-24T21:55:11.849Z" },
+]
+
+[[package]]
 name = "google-cloud-core"
 version = "2.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -439,6 +470,27 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/f9/54/790548b190cff9cf07225c811d2668eacd8f2cbf04114475cbe3e5738752/google_cloud_core-2.7.0.tar.gz", hash = "sha256:874aaf89765db87a9b911b7a2ca7c5068554868eed9e75c7766affe342a2913d", size = 36603, upload-time = "2026-08-25T19:18:43.076Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/64/904dbc9bee128e7b87eeb60da67c8fa4d1a8acdc9a45dd2fedca67ef184d/google_cloud_core-2.7.0-py3-none-any.whl", hash = "sha256:c18a250904cfdda021eb3ae8b8238c9f9ca272a4cbbfb5cba946b3fe3022eed1", size = 31046, upload-time = "2026-08-24T21:55:28.36Z" },
+]
+
+[[package]]
+name = "google-cloud-logging"
+version = "3.17.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "google-api-core", extra = ["grpc"] },
+    { name = "google-auth" },
+    { name = "google-cloud-appengine-logging" },
+    { name = "google-cloud-audit-log" },
+    { name = "google-cloud-core" },
+    { name = "grpc-google-iam-v1" },
+    { name = "grpcio" },
+    { name = "opentelemetry-api" },
+    { name = "proto-plus" },
+    { name = "protobuf" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e1/5b/fbb367f8bb05b3e968048686f440181765a8681c3a07cfa901814f9280e1/google_cloud_logging-3.17.0.tar.gz", hash = "sha256:d7343f2b82b4f9e9244bfc8aba7ad034c415f9bbb405ed28d1125aa37d270b72", size = 292071, upload-time = "2026-10-01T18:17:01.302Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/35/53/911cbf97517123350292ac6edba7d130ee44acccfd3e2a36f6807f32da14/google_cloud_logging-3.17.0-py3-none-any.whl", hash = "sha256:da2819da683a5135e21c2853ff2c86040786cd5521c3f71424755c110cf36fe2", size = 234020, upload-time = "2026-10-01T18:10:50.73Z" },
 ]
 
 [[package]]
