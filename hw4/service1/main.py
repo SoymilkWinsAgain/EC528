@@ -20,7 +20,7 @@ bucket = storage_client.bucket(BUCKET_NAME)
 logging_client = cloud_logging.Client(project=PROJECT_ID)
 cloud_logger = logging_client.logger("hw4-service1")
 publisher = pubsub_v1.PublisherClient()
-topic_path = publisher.topic_path(PROJECT_ID, "hw4-forbidden-requests")
+topic_path = publisher.topic_path(PROJECT_ID, os.environ.get("TOPIC_ID", "hw4-forbidden-requests"))
 FORBIDDEN_COUNTRIES = {
     "north korea", "iran", "cuba", "myanmar", "iraq",
     "libya", "sudan", "zimbabwe", "syria",

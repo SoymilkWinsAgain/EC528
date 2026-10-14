@@ -1,0 +1,30 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261013184919
+Username: QUANTUMULTRA\ZhuJQ
+RunAs User: QUANTUMULTRA\ZhuJQ
+Configuration Name: 
+Machine: QUANTUMULTRA (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$startupSource = 'C:\Users\ZhuJQ\workspace\EC528\EC528\hw4\startup.bash'; $startupTarget = 'C:\Users\ZhuJQ\workspace\EC528\EC528\hw4\startup.sh'; if (Test-Path -LiteralPath $startupTarget) { throw 'startup.sh already exists; refusing to overwrite it.' }; Move-Item -LiteralPath $startupSource -Destination $startupTarget; $deployFile = 'C:\Users\ZhuJQ\workspace\EC528\EC528\hw4\deploy.ps1'; $deployText = [IO.File]::ReadAllText($deployFile); $deployText = $deployText.Replace("`$startupPath = Join-Path `$PSScriptRoot 'startup.bash'`nif (-not (Test-Path -LiteralPath `$startupPath)) {`n    `$startupPath = Join-Path `$PSScriptRoot 'startup.sh'`n}", "`$startupPath = Join-Path `$PSScriptRoot 'startup.sh'"); [IO.File]::WriteAllText($deployFile, $deployText, [Text.UTF8Encoding]::new($false)); $psParseTokens = $null; $psParseErrors = $null; [Management.Automation.Language.Parser]::ParseFile($deployFile, [ref]$psParseTokens, [ref]$psParseErrors) | Out-Null; if ($psParseErrors.Count -gt 0) { $psParseErrors; throw 'PowerShell parsing failed' }; & 'C:\Program Files\Git\bin\bash.exe' -n 'C:/Users/ZhuJQ/workspace/EC528/EC528/hw4/startup.sh'; if ($LASTEXITCODE -ne 0) { throw 'Bash parsing failed' }; Write-Output 'PowerShell and Bash syntax checks passed.'; & $deployFile -ProjectId cs528-project-0-508215 -Plan
+Process ID: 11456
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Project: cs528-project-0-508215; zone: us-east1-b; plan only: True
+Started (UTC): 2026-10-13T22:49:19.9939644Z
+PLAN: gcloud "compute" "addresses" "create" "hw4-server-ip" "--project=cs528-project-0-508215" "--region=us-east1" "--network-tier=PREMIUM"
+PLAN: gcloud "compute" "firewall-rules" "create" "hw4-allow-http" "--project=cs528-project-0-508215" "--network=default" "--direction=INGRESS" "--allow=tcp:8080" "--source-ranges=0.0.0.0/0" "--target-tags=hw4-server"
+PLAN: gcloud "compute" "instances" "create" "hw4-server" "--project=cs528-project-0-508215" "--zone=us-east1-b" "--machine-type=f1-micro" "--network=default" "--image-family=debian-12" "--image-project=debian-cloud" "--boot-disk-type=pd-standard" "--boot-disk-size=10GB" "--service-account=hw4-server@cs528-project-0-508215.iam.gserviceaccount.com" "--scopes=cloud-platform" "--labels=assignment=ec528-hw4,role=server" "--metadata-from-file=startup-script=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0/startup.sh,app-code=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0\service1-main.py,app-requirements=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0\service1-requirements.txt,app-env=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0/app.env" "--address=hw4-server-ip" "--tags=hw4-server"
+PLAN: gcloud "compute" "instances" "create" "hw4-reporter" "--project=cs528-project-0-508215" "--zone=us-east1-b" "--machine-type=f1-micro" "--network=default" "--image-family=debian-12" "--image-project=debian-cloud" "--boot-disk-type=pd-standard" "--boot-disk-size=10GB" "--service-account=hw4-reporter@cs528-project-0-508215.iam.gserviceaccount.com" "--scopes=cloud-platform" "--labels=assignment=ec528-hw4,role=reporter" "--metadata-from-file=startup-script=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0/startup.sh,app-code=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0\service2-main.py,app-requirements=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0\service2-requirements.txt,app-env=C:\Users\ZhuJQ\AppData\Local\Temp\ec528-hw4-b29c58cf-75e3-43dd-a2e8-00d8d747b5f0/app.env"
+Finished (UTC): 2026-10-13T22:49:24.4663147Z
+**********************
+Windows PowerShell transcript end
+End time: 20261013184924
+**********************

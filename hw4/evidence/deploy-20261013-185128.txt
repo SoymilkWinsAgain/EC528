@@ -1,0 +1,64 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261013185128
+Username: QUANTUMULTRA\ZhuJQ
+RunAs User: QUANTUMULTRA\ZhuJQ
+Configuration Name: 
+Machine: QUANTUMULTRA (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\ZhuJQ\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\ZhuJQ\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\ZhuJQ\AppData\Roaming\Code\logs\20261013T170740\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\ZhuJQ\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-10512-495505.json' -FeatureFlags @() 
+Process ID: 34132
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Project: cs528-project-0-508215; zone: us-east1-b; plan only: False
+Started (UTC): 2026-10-13T22:51:28.6576876Z
+
+
+Created [https://www.googleapis.com/compute/v1/projects/cs528-project-0-50821
+5/zones/us-east1-b/instances/hw4-server].
+WARNING: Some requests generated warnings:
+ - You are creating a global DNS VM. VM instances using global DNS are vulner
+able to cross-regional outages. To reduce the risk of widespread service disr
+uption, use zonal DNS instead. Learn more at https://cloud.google.com/compute
+/docs/networking/zonal-dns?utm_id=vm-insert
+
+NAME        ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP
+   STATUS
+hw4-server  us-east1-b  f1-micro                   10.142.0.3   35.237.215.17
+5  RUNNING
+WARNING: You have selected a disk size of under [200GB]. This may result
+ in poor I/O performance. For more information, see: https://developers.
+google.com/compute/docs/disks#performance.
+Created [https://www.googleapis.com/compute/v1/projects/cs528-project-0-
+508215/zones/us-east1-b/instances/hw4-reporter].
+WARNING: Some requests generated warnings:
+ - You are creating a global DNS VM. VM instances using global DNS are v
+ulnerable to cross-regional outages. To reduce the risk of widespread se
+rvice disruption, use zonal DNS instead. Learn more at https://cloud.goo
+gle.com/compute/docs/networking/zonal-dns?utm_id=vm-insert
+
+NAME          ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERN
+AL_IP    STATUS
+hw4-reporter  us-east1-b  f1-micro                   10.142.0.4   136.10
+8.84.47  RUNNING
+NAME          ZONE        STATUS   NAT_IP
+hw4-reporter  us-east1-b  RUNNING  136.108.84.47
+hw4-server    us-east1-b  RUNNING  35.237.215.175
+Test URL: http://35.237.215.175:8080/pages/0.html
+RUNNING means the VM is running; Python dependency installation may still be in progress.
+Finished (UTC): 2026-10-13T22:52:10.9039112Z
+**********************
+Windows PowerShell transcript end
+End time: 20261013185210
+**********************

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "hw4-client",
+    "id": "5680336269098549971",
+    "creationTimestamp": "2026-10-13T16:18:21.044-07:00",
+    "lastStartTimestamp": "2026-10-13T16:18:30.239-07:00",
+    "zone": "us-east1-b",
+    "machineType": "e2-micro",
+    "status": "RUNNING",
+    "internalIp": "10.142.0.6",
+    "externalIp": "136.108.142.97",
+    "serviceAccounts": [
+      {
+        "email": "hw4-client@cs528-project-0-508215.iam.gserviceaccount.com"
+      }
+    ],
+    "disks": [
+      {
+        "source": "https://www.googleapis.com/compute/v1/projects/cs528-project-0-508215/zones/us-east1-b/disks/hw4-client",
+        "boot": true,
+        "autoDelete": true,
+        "diskSizeGb": "10"
+      }
+    ]
+  },
+  {
+    "name": "hw4-reporter",
+    "id": "4301723093604436223",
+    "creationTimestamp": "2026-10-13T15:52:00.477-07:00",
+    "lastStartTimestamp": "2026-10-13T15:52:07.599-07:00",
+    "zone": "us-east1-b",
+    "machineType": "f1-micro",
+    "status": "RUNNING",
+    "internalIp": "10.142.0.4",
+    "externalIp": "136.108.84.47",
+    "serviceAccounts": [
+      {
+        "email": "hw4-reporter@cs528-project-0-508215.iam.gserviceaccount.com",
+        "scopes": [
+          "https://www.googleapis.com/auth/cloud-platform"
+        ]
+      }
+    ],
+    "disks": [
+      {
+        "source": "https://www.googleapis.com/compute/v1/projects/cs528-project-0-508215/zones/us-east1-b/disks/hw4-reporter",
+        "boot": true,
+        "autoDelete": true,
+        "diskSizeGb": "10"
+      }
+    ]
+  },
+  {
+    "name": "hw4-server",
+    "id": "7517268887967303916",
+    "creationTimestamp": "2026-10-13T15:51:47.204-07:00",
+    "lastStartTimestamp": "2026-10-13T15:51:56.237-07:00",
+    "zone": "us-east1-b",
+    "machineType": "f1-micro",
+    "status": "RUNNING",
+    "internalIp": "10.142.0.3",
+    "externalIp": "35.237.215.175",
+    "serviceAccounts": [
+      {
+        "email": "hw4-server@cs528-project-0-508215.iam.gserviceaccount.com",
+        "scopes": [
+          "https://www.googleapis.com/auth/cloud-platform"
+        ]
+      }
+    ],
+    "disks": [
+      {
+        "source": "https://www.googleapis.com/compute/v1/projects/cs528-project-0-508215/zones/us-east1-b/disks/hw4-server",
+        "boot": true,
+        "autoDelete": true,
+        "diskSizeGb": "10"
+      }
+    ]
+  }
+]

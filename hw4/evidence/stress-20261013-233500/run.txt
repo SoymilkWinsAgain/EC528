@@ -1,0 +1,42 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261013193500
+Username: QUANTUMULTRA\ZhuJQ
+RunAs User: QUANTUMULTRA\ZhuJQ
+Configuration Name: 
+Machine: QUANTUMULTRA (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\ZhuJQ\AppData\Local\Programs\Microsoft VS Code\7baac39ec3\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 21616
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Run: 20261013-233500; server internal IP: 10.142.0.3
+Scheduled start (UTC): 2026-10-13T23:36:00.0000000+00:00
+Stages: 1, 2, 3, 4 clients; 180 seconds each; 15 seconds recovery between stages.
+Keep this terminal open. Total time is approximately 14 minutes.
+Collected 1-client stage: evidence/stress-20261013-233500/metrics-1.csv
+1 clients: statuses={'200': 1086, '400': 48}, unexpected exits=0
+Collected 2-client stage: evidence/stress-20261013-233500/metrics-2.csv
+2 clients: statuses={'200': 1115, '400': 51}, unexpected exits=0
+Collected 3-client stage: evidence/stress-20261013-233500/metrics-3.csv
+3 clients: statuses={'200': 1119, '400': 54}, unexpected exits=0
+Collected 4-client stage: evidence/stress-20261013-233500/metrics-4.csv
+4 clients: statuses={'200': 1152, '400': 52}, unexpected exits=0
+
+server.tar.gz             | 6 kB |   6.1 kB/s | ETA: 00:00:00 | 100%
+
+
+client.tar.gz             | 48 kB |  49.0 kB/s | ETA: 00:00:00 | 100%
+
+Evidence saved to: C:\Users\ZhuJQ\workspace\EC528\EC528\hw4\evidence\stress-20261013-233500
+Completed. VM instances remain running until you stop or delete them.
+**********************
+Windows PowerShell transcript end
+End time: 20261013194857
+**********************

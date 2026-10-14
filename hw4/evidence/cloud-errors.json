@@ -1,0 +1,282 @@
+﻿[
+  {
+    "insertId": "10mkjegfppuv57",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "PATCH",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:14.946358+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:14.979092457Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:14.979092457Z"
+  },
+  {
+    "insertId": "10yfa2tfpik26h",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "TRACE",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:14.758947+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:14.795757150Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:14.795757150Z"
+  },
+  {
+    "insertId": "1szmwzaf1wmt9o",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "OPTIONS",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:14.572243+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:14.607287844Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:14.607287844Z"
+  },
+  {
+    "insertId": "1g86lxdf9rc7wl",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "CONNECT",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:14.422574+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:14.452003580Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:14.452003580Z"
+  },
+  {
+    "insertId": "oq6v21fo1zrnl",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "HEAD",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:14.141956+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:14.170175434Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:14.170175434Z"
+  },
+  {
+    "insertId": "1q705scfotko8k",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "DELETE",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:13.966114+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:13.997788917Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:13.997788917Z"
+  },
+  {
+    "insertId": "1bqobgofh64pyn",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "PUT",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:05:13.784792+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:13.821692254Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:05:13.821692254Z"
+  },
+  {
+    "insertId": "aujiqefil3wdf",
+    "jsonPayload": {
+      "country": "Iran",
+      "event_type": "forbidden_country",
+      "filename": "pages/0.html",
+      "http_method": "GET",
+      "message": "Permission denied: request from Iran for pages/0.html",
+      "request_path": "/pages/0.html",
+      "status_code": 400,
+      "timestamp": "2026-10-13T23:05:00.414356+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:05:00.447824766Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "CRITICAL",
+    "timestamp": "2026-10-13T23:05:00.447824766Z"
+  },
+  {
+    "insertId": "ild7wbf8g6qnn",
+    "jsonPayload": {
+      "event_type": "file_not_found",
+      "filename": "pages/hw4-evidence-missing.html",
+      "http_method": "GET",
+      "request_path": "/pages/hw4-evidence-missing.html",
+      "status_code": 404,
+      "timestamp": "2026-10-13T23:04:50.596388+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:04:50.627918431Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "WARNING",
+    "timestamp": "2026-10-13T23:04:50.627918431Z"
+  },
+  {
+    "insertId": "1fdvhmdfqawktx",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "PUT",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T23:00:08.503775+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T23:00:08.542865094Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T23:00:08.542865094Z"
+  },
+  {
+    "insertId": "1h0dggdfgng3v3",
+    "jsonPayload": {
+      "country": "Iran",
+      "event_type": "forbidden_country",
+      "filename": "pages/0.html",
+      "http_method": "GET",
+      "message": "Permission denied: request from Iran for pages/0.html",
+      "request_path": "/pages/0.html",
+      "status_code": 400,
+      "timestamp": "2026-10-13T22:54:44.641248+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T22:54:44.664579449Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "CRITICAL",
+    "timestamp": "2026-10-13T22:54:44.664579449Z"
+  },
+  {
+    "insertId": "l4n43jf3fk5ak",
+    "jsonPayload": {
+      "event_type": "method_not_implemented",
+      "filename": null,
+      "http_method": "PUT",
+      "request_path": "/pages/0.html",
+      "status_code": 501,
+      "timestamp": "2026-10-13T22:54:44.473673+00:00"
+    },
+    "logName": "projects/cs528-project-0-508215/logs/hw4-service1",
+    "receiveTimestamp": "2026-10-13T22:54:44.497025389Z",
+    "resource": {
+      "labels": {
+        "instance_id": "7517268887967303916",
+        "project_id": "cs528-project-0-508215",
+        "zone": "projects/727509440430/zones/us-east1-b"
+      },
+      "type": "gce_instance"
+    },
+    "severity": "ERROR",
+    "timestamp": "2026-10-13T22:54:44.497025389Z"
+  }
+]

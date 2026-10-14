@@ -1,0 +1,59 @@
+{
+  "clients": 3,
+  "planned_duration_s": 180,
+  "started_utc": "2026-10-13T23:42:30.000829+00:00",
+  "finished_utc": "2026-10-13T23:45:30.050078+00:00",
+  "status_counts": {
+    "200": 1119,
+    "400": 54
+  },
+  "successful_responses_per_s": 6.216666666666667,
+  "permission_denied_400": 54,
+  "unexpected_exits": 0,
+  "requests_without_status": 0,
+  "error_lines": 0,
+  "client_vm_cpu_busy_pct_mean": 1.447419696041864,
+  "client_vm_memory_used_pct_end": 38.50779774608884,
+  "workers": [
+    {
+      "client": 1,
+      "status_counts": {
+        "200": 377,
+        "400": 14
+      },
+      "unexpected_exits": 0,
+      "request_lines": 391,
+      "launches": 1,
+      "error_samples": [],
+      "requests_without_status": 0,
+      "error_lines": 0
+    },
+    {
+      "client": 2,
+      "status_counts": {
+        "200": 368,
+        "400": 23
+      },
+      "unexpected_exits": 0,
+      "request_lines": 391,
+      "launches": 1,
+      "error_samples": [],
+      "requests_without_status": 0,
+      "error_lines": 0
+    },
+    {
+      "client": 3,
+      "status_counts": {
+        "200": 374,
+        "400": 17
+      },
+      "unexpected_exits": 0,
+      "request_lines": 391,
+      "launches": 1,
+      "error_samples": [],
+      "requests_without_status": 0,
+      "error_lines": 0
+    }
+  ],
+  "boundary_note": "Processes are deliberately terminated at the deadline; partial final requests and these exits are not overload failures."
+}

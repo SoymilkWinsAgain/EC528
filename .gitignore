@@ -1,5 +1,6 @@
 /hw2/data/*
 /hw2/*.html
+/hw4/output/*
 .venv/
 __pycache__/
 *.pyc

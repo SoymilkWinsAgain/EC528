@@ -1,0 +1,13 @@
+{
+  "hostname": "hw4-client.c.cs528-project-0-508215.internal",
+  "server_ip": "10.142.0.3",
+  "scheduled_start_epoch": 1791934560.0,
+  "duration_s": 180,
+  "cooldown_s": 15,
+  "stages": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "surface": "Static figures for an English homework PDF report",
+  "source": "EC528\\hw4\\evidence\\stress-20261013-233500",
+  "question": "How do VM resources scale across 1-4 clients, and what are the four-client sampled peaks?",
+  "figures": [
+    {
+      "file": "performance.png",
+      "family": "comparison",
+      "variant": "grouped bars",
+      "grain": "four concurrency stages",
+      "measures": "time-weighted mean and sampled maximum"
+    },
+    {
+      "file": "four-client-timeseries.png",
+      "family": "trend",
+      "variant": "three vertically stacked time series",
+      "grain": "36 five-second samples for the four-client stage"
+    }
+  ],
+  "palette": {
+    "vm_or_mean": "#356AA0",
+    "service": "#B28A35",
+    "peak": "open fill with blue edge"
+  },
+  "caveats": [
+    "Single run per stage; no confidence intervals or causal attribution.",
+    "Network includes backend services; peaks are bounded by sampling resolution.",
+    "400 permission denials are excluded from service failures, but still consume resources."
+  ]
+}

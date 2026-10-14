@@ -1,0 +1,23 @@
+[
+  {
+    "endTime": "2026-10-13T16:12:03.086-07:00",
+    "insertTime": "2026-10-13T16:11:49.605-07:00",
+    "operationType": "insert",
+    "status": "DONE",
+    "targetLink": "https://www.googleapis.com/compute/v1/projects/cs528-project-0-508215/zones/us-east1-b/instances/hw4-client"
+  },
+  {
+    "endTime": "2026-10-13T16:18:02.498-07:00",
+    "insertTime": "2026-10-13T16:17:47.741-07:00",
+    "operationType": "delete",
+    "status": "DONE",
+    "targetLink": "https://www.googleapis.com/compute/v1/projects/cs528-project-0-508215/zones/us-east1-b/instances/hw4-client"
+  },
+  {
+    "endTime": "2026-10-13T16:18:30.282-07:00",
+    "insertTime": "2026-10-13T16:18:21.196-07:00",
+    "operationType": "insert",
+    "status": "DONE",
+    "targetLink": "https://www.googleapis.com/compute/v1/projects/cs528-project-0-508215/zones/us-east1-b/instances/hw4-client"
+  }
+]
