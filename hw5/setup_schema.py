@@ -1,8 +1,8 @@
 import getpass
 import os
 from pathlib import Path
-
 from google.cloud.sql.connector import Connector, IPTypes
+from google.oauth2.credentials import Credentials
 
 
 def setup_schema(connection):
@@ -36,15 +36,12 @@ def setup_schema(connection):
 
 
 def main():
-    instance = os.environ.get(
-        "INSTANCE_CONNECTION_NAME",
-        "cs528-project-0-508215:us-east1:hw5-db",
-    )
-    password = os.environ.get("DB_PASSWORD") or getpass.getpass(
-        "Database password: "
-    )
+    instance = os.environ.get("INSTANCE_CONNECTION_NAME", "cs528-project-0-508215:us-east1:hw5-db",)
+    password = os.environ.get("DB_PASSWORD") or getpass.getpass("Database password: ")
 
-    with Connector(refresh_strategy="LAZY") as connector:
+    token = os.environ.get("GCP_ACCESS_TOKEN")
+    credentials = Credentials(token) if token else None
+    with Connector(credentials=credentials, refresh_strategy="LAZY") as connector:
         connection = connector.connect(
             instance,
             "pg8000",
