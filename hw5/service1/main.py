@@ -19,6 +19,7 @@ RUN_ID = os.environ.get("RUN_ID", "manual")
 
 storage_client = storage.Client(project=PROJECT_ID)
 bucket = storage_client.bucket(BUCKET_NAME)
+file_cache = {}
 logging_client = cloud_logging.Client(project=PROJECT_ID)
 cloud_logger = logging_client.logger("hw5-service1")
 publisher = pubsub_v1.PublisherClient()
@@ -126,8 +127,14 @@ class Handler(BaseHTTPRequestHandler):
             }), flush=True)
 
     def read_cloud_file(self, object_name):
+        if object_name in file_cache:
+            return file_cache[object_name]
+
         with measure(self.timings, "storage_ns"):
-            return bucket.blob(object_name).download_as_bytes(timeout=20)
+            contents = bucket.blob(object_name).download_as_bytes(timeout=20)
+
+        file_cache[object_name] = contents
+        return contents
 
     def serve_file(self, object_name):
         country = self.request_data["country"]

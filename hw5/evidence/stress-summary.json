@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-10-27T22:57:42.736035-04:00",
+  "finished_at": "2026-10-28T01:04:37.642222-04:00",
+  "wall_seconds": 7614.903,
+  "clients": [
+    {
+      "client": 1,
+      "exit_code": 0,
+      "seconds": 7562.023
+    },
+    {
+      "client": 2,
+      "exit_code": 0,
+      "seconds": 7612.136
+    }
+  ],
+  "expected_requests": 100000,
+  "database_requests": 100000,
+  "verified": true,
+  "check_only": false,
+  "args": [
+    "-d",
+    "35.237.121.161",
+    "-p",
+    "8080",
+    "-b",
+    "none",
+    "-w",
+    "pages",
+    "-n",
+    "50000",
+    "-i",
+    "11999",
+    "-r",
+    "528",
+    "-t",
+    "30"
+  ]
+}

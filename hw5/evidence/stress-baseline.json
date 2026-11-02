@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-27T22:57:42.736035-04:00",
+  "project_id": "cs528-project-0-508215",
+  "server_ip": "35.237.121.161",
+  "run_id": "stress-01",
+  "start_request_id": 2145,
+  "previous_client_like_requests": 2109,
+  "expected_clients": 2,
+  "requests_per_client": 50000,
+  "seed": 528,
+  "maximum_file_index": 11999,
+  "check_only": false,
+  "cohort_rule": "run_id = 'stress-01' AND request_id > start_request_id AND country IS NOT NULL"
+}

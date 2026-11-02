@@ -1,7 +1,29 @@
+# Generated HW2 pages
 /hw2/data/*
 /hw2/*.html
-/hw4/output/*
+
+# Generated output, except the HW5 report documents
+*/output/*
+!/hw5/output/doc/
+!/hw5/output/pdf/
+
+# Python environment and bytecode
 .venv/
 __pycache__/
 *.pyc
+
+# Local database configuration
 /hw5/app.env
+
+# Temporary files and logs
+/tmp/
+~$*
+*.log
+
+# HW5 diagnostic runs; retain formal summaries and screenshots
+/hw5/evidence/benchmark-*
+/hw5/evidence/cache-benchmark-*
+/hw5/evidence/cache-hit-benchmark-*
+/hw5/evidence/client-connection-probe.json
+/hw5/evidence/failed-start-*/
+/hw5/evidence/stress-summary.txt
