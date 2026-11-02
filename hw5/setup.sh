@@ -125,6 +125,59 @@ setup_database() {
     unset GCP_ACCESS_TOKEN
 }
 
+# Deploy the hourly Cloud SQL stopper before starting the database.
+FUNCTION_NAME="hw5-stop-sql"
+SCHEDULER_JOB="hw5-stop-sql-hourly"
+
+JOB_ACTION="create"
+if gcloud scheduler jobs describe "$SCHEDULER_JOB" \
+    --location="$REGION" --project="$PROJECT_ID" >/dev/null 2>&1
+then
+    gcloud scheduler jobs pause "$SCHEDULER_JOB" \
+        --location="$REGION" --project="$PROJECT_ID" --quiet
+    JOB_ACTION="update"
+fi
+
+gcloud services enable \
+    cloudfunctions.googleapis.com \
+    run.googleapis.com \
+    cloudbuild.googleapis.com \
+    artifactregistry.googleapis.com \
+    cloudscheduler.googleapis.com \
+    --project="$PROJECT_ID" --quiet
+
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+    --member="serviceAccount:$SA_EMAIL" \
+    --role="roles/cloudsql.admin" \
+    --condition=None --quiet --format=none
+
+gcloud functions deploy "$FUNCTION_NAME" \
+    --gen2 --region="$REGION" --runtime=python312 \
+    --source=sql_stopper --entry-point=stop_database \
+    --trigger-http --no-allow-unauthenticated \
+    --service-account="$SA_EMAIL" \
+    --project="$PROJECT_ID" --quiet
+
+gcloud functions add-invoker-policy-binding "$FUNCTION_NAME" \
+    --member="serviceAccount:$SA_EMAIL" \
+    --region="$REGION" --project="$PROJECT_ID" \
+    --quiet --format=none
+
+FUNCTION_URL=$(gcloud functions describe "$FUNCTION_NAME" \
+    --gen2 --region="$REGION" --project="$PROJECT_ID" \
+    --format='value(serviceConfig.uri)')
+
+gcloud scheduler jobs "$JOB_ACTION" http "$SCHEDULER_JOB" \
+    --schedule="0 * * * *" --time-zone=Etc/UTC \
+    --uri="$FUNCTION_URL" --http-method=POST \
+    --oidc-service-account-email="$SA_EMAIL" \
+    --oidc-token-audience="$FUNCTION_URL" \
+    --location="$REGION" --project="$PROJECT_ID" --quiet
+
+# Keep automatic stopping paused during development and load testing.
+gcloud scheduler jobs pause "$SCHEDULER_JOB" \
+    --location="$REGION" --project="$PROJECT_ID" --quiet
+
 setup_database
 
 # Generate the configuration passed to the VM.
