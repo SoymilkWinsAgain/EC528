@@ -66,7 +66,7 @@ SELECT
     run_id
 FROM migration_source;
 
--- Error details are already stored in requests.
+-- error requests view
 CREATE VIEW hw6.request_errors AS
 SELECT
     request_id,

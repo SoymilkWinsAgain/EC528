@@ -27,3 +27,6 @@ __pycache__/
 /hw5/evidence/client-connection-probe.json
 /hw5/evidence/failed-start-*/
 /hw5/evidence/stress-summary.txt
+
+# HW6 temporary environment variables and logs
+/hw6/.hw6.env
