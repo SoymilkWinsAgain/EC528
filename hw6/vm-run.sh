@@ -3,8 +3,13 @@
 set -euo pipefail
 
 cd ~/hw6
-
 echo "Running on VM: $(hostname)"
+
+chmod 600 app.env
+set -a
+source app.env
+set +a
+export GOOGLE_CLOUD_PROJECT="cs528-project-0-508215"
 
 sudo apt-get update
 sudo env DEBIAN_FRONTEND=noninteractive \
@@ -12,10 +17,4 @@ sudo env DEBIAN_FRONTEND=noninteractive \
 
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-
-chmod 600 .hw6.env
-set -a
-source .hw6.env
-set +a
-
 .venv/bin/python -u models.py
