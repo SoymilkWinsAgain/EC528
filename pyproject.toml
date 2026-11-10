@@ -5,9 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "apache-beam[gcp]==2.76.0",
     "functions-framework>=3.10.2",
     "google-cloud-logging>=3.17.0",
     "google-cloud-pubsub>=2.42.0",
     "google-cloud-storage>=3.15.0",
-    "numpy>=2.5.3",
+    "numpy>=2.0,<2.5",
 ]
